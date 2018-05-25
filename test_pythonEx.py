@@ -13,12 +13,12 @@ class TestPythonEx(unittest.TestCase):
 
 	def createDir(name):
 		if os.path.isdir(name):
-			print 'this dir already exists'
+			print ('this dir already exists')
 		else:
-			print 'creating new dir'
+			print ('creating new dir')
 			os.mkdir(name)
 			if os.path.isdir(name):
-				print 'now the dir has been created'
+				print ('now the dir has been created')
 
 	def setUp(self):
 		'''
@@ -74,7 +74,7 @@ class TestPythonEx(unittest.TestCase):
 			if os.path.isdir(path):
 				shutil.rmtree(path, ignore_errors=True)
 			else:
-				print "Not a valid directory"
+				print ("Not a valid directory")
 
 	
 	# testing function walk
