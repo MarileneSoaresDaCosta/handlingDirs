@@ -83,12 +83,12 @@ def isDirInCWD(root_dir):
 
 if __name__ == '__main__':
 	# getting use input and testing if root_dir is in cwd
-	root_dir = raw_input('Enter the root directory: ')
+	root_dir = input('Enter the root directory: ')
 	if isDirInCWD(root_dir):
-		keyword = raw_input('Enter keyword or regex to search: ')
+		keyword = input('Enter keyword or regex to search: ')
 	else:
 		print ('this directory is not in the cwd.')
-		restart = raw_input('Restart script? y or n: ')
+		restart = input('Restart script? y or n: ')
 		if restart == 'y':
 			os.execl(sys.executable, sys.executable, *sys.argv)
 		else:
@@ -97,7 +97,7 @@ if __name__ == '__main__':
 
 
 	# generate 1st required output (Python dict)
-	print (walkroot_dir, keyword)
+	print (walk(root_dir, keyword))
 
 	# generate 2nd required output (graph)
 	Graph(output)
